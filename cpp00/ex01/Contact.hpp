@@ -13,6 +13,8 @@ class Contact
 		std::string _phoneNum;
 		std::string _secret;
 	public:
+		Contact();
+		~Contact();
 		std::string getFirstName() const;
 
 };
