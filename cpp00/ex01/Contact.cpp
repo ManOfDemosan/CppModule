@@ -27,11 +27,11 @@ std::string Contact::getSecret() const
 
 void Contact::show(void) const
 {
-	std::cout << std::setw(14) << "First Name : " << getFirstName() << std::endl;
-	std::cout << std::setw(14) << "Last Name : " << getLastName() << std::endl;
-	std::cout << std::setw(14) << "Nick Name : " << getNickName() << std::endl;
-	std::cout << std::setw(14) << "Phone Num : " << getPhoneNum() << std::endl;
-	std::cout << std::setw(14) << "Secret : " << getSecret() << std::endl;
+	std::cout << std::setw(20) << "First Name : " << getFirstName() << std::endl;
+	std::cout << std::setw(20) << "Last Name : " << getLastName() << std::endl;
+	std::cout << std::setw(20) << "Nick Name : " << getNickName() << std::endl;
+	std::cout << std::setw(20) << "Phone Num : " << getPhoneNum() << std::endl;
+	std::cout << std::setw(20) << "Secret : " << getSecret() << std::endl;
 
 }
 
@@ -50,7 +50,7 @@ void Contact::setNickName(std::string _nickName)
 	this->_nickName = _nickName;
 }
 
-void Contact::setPhoneNum(std::string _pohoneNum)
+void Contact::setPhoneNum(std::string _phoneNum)
 {
 	this->_phoneNum = _phoneNum;
 }

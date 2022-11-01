@@ -3,7 +3,9 @@ CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
-FILES = ./Phonebook.cpp
+FILES = ./PhoneBook.cpp \
+		./Contact.cpp	\
+		./main.cpp
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)
 
