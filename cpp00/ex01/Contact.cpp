@@ -5,12 +5,67 @@ std::string Contact::getFirstName() const
 	return this->_firstName;
 }
 
-int main()
+std::string Contact::getLastName() const
 {
-	Contact home;
-	Contact mobile;
+	return this->_lastName;
+}
 
+std::string Contact::getNickName() const
+{
+	return this->_nickName;
+}
 
-	home.getFirstName();
-	mobile.getFirstName();
+std::string Contact::getPhoneNum() const
+{
+	return this->_phoneNum;
+}
+
+std::string Contact::getSecret() const
+{
+	return this->_secret;
+}
+
+void Contact::show(void) const
+{
+	std::cout << std::setw(14) << "First Name : " << getFirstName() << std::endl;
+	std::cout << std::setw(14) << "Last Name : " << getLastName() << std::endl;
+	std::cout << std::setw(14) << "Nick Name : " << getNickName() << std::endl;
+	std::cout << std::setw(14) << "Phone Num : " << getPhoneNum() << std::endl;
+	std::cout << std::setw(14) << "Secret : " << getSecret() << std::endl;
+
+}
+
+void Contact::setFirstName(std::string _firstName)
+{
+	this->_firstName = _firstName;
+}
+
+void Contact::setLastName(std::string _lastName)
+{
+	this->_lastName = _lastName;
+}
+
+void Contact::setNickName(std::string _nickName)
+{
+	this->_nickName = _nickName;
+}
+
+void Contact::setPhoneNum(std::string _pohoneNum)
+{
+	this->_phoneNum = _phoneNum;
+}
+
+void Contact::setSecret(std::string _secret)
+{
+	this->_secret = _secret;
+}
+
+Contact::Contact()
+{
+	return ;
+}
+
+Contact::~Contact()
+{
+	return ;
 }
