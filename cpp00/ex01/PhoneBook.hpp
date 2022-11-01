@@ -1,13 +1,16 @@
-#ifdef PHONEBOOK_HPP
+#ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
+
+# include "Contact.hpp"
 
 class PhoneBook
 {
 	private:
-	char	contact[8];
-	int		now_index;
+		Contact	contact[8];
+		int	nowIndex;
 
 	public:
+	
 };
 
 #endif
