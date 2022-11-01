@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 		int j = 0;
 		while(argv[i][j] != '\0')
 		{
-			std::cout << static_cast<char>(toupper(argv[i][j]));
+			std::cout << static_cast<char>(std::toupper(argv[i][j]));
 			j++;
 		}
 		i++;

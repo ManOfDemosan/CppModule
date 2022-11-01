@@ -1,7 +1,7 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-#include<iostream>
+# include<iostream>
 
 class Contact
 {
@@ -16,7 +16,6 @@ class Contact
 		Contact();
 		~Contact();
 		std::string getFirstName() const;
-
 };
 
 #endif

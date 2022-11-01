@@ -5,7 +5,8 @@ std::string Contact::getFirstName() const
 	return this->_firstName;
 }
 
-int main() {
+int main()
+{
 	Contact home;
 	Contact mobile;
 
