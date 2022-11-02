@@ -12,7 +12,7 @@ int main()
 		if(cmd == "ADD" || cmd == "add")
 			phonebook.addContact();
 		else if(cmd == "SEARCH" || cmd == "search")
-			std::cout << "search" << std::endl;// 탐색함수
+			phonebook._printPhonebook();
 		else if(cmd == "EXIT" || cmd == "exit")
 			break;
 		else

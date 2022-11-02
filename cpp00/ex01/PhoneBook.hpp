@@ -6,12 +6,12 @@
 class PhoneBook
 {
 	private:
-		Contact	_contact[8];
-		int		_nowIndex;
-		void	_printPhone();
+		Contact		_contact[8];
+		int			_nowIndex;
+		std::string	cutTen(std::string);
 	public:
+		void 		_printPhonebook();
 		void addContact();
-		void searchPhonebook();
 		PhoneBook();
 		~PhoneBook();
 	
