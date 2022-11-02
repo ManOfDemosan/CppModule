@@ -8,10 +8,11 @@ class PhoneBook
 	private:
 		Contact		_contact[8];
 		int			_nowIndex;
-		std::string	cutTen(std::string);
-	public:
+		std::string	_cutTen(std::string);
 		void 		_printPhonebook();
-		void addContact();
+	public:
+		void 		addContact();
+		void		searchPeople();
 		PhoneBook();
 		~PhoneBook();
 	

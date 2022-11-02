@@ -12,7 +12,7 @@ int main()
 		if(cmd == "ADD" || cmd == "add")
 			phonebook.addContact();
 		else if(cmd == "SEARCH" || cmd == "search")
-			phonebook._printPhonebook();
+			phonebook.searchPeople();
 		else if(cmd == "EXIT" || cmd == "exit")
 			break;
 		else
