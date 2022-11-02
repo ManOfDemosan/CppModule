@@ -5,13 +5,13 @@ void	PhoneBook::addContact()
 {
 	int idx;
 
-	idx = _nowIndex % 8;
-	_contact[idx].setFirstName();
-	_contact[idx].setLastName();
-	_contact[idx].setNickName();
-	_contact[idx].setPhoneNum();
-	_contact[idx].setSecret();
-	++_nowIndex;
+	idx = this->_nowIndex % 8;
+	this->_contact[idx].setFirstName();
+	this->_contact[idx].setLastName();
+	this->_contact[idx].setNickName();
+	this->_contact[idx].setPhoneNum();
+	this->_contact[idx].setSecret();
+	++this->_nowIndex;
 }
 
 std::string PhoneBook::_cutTen(std::string str)
@@ -34,9 +34,9 @@ void	PhoneBook::_printPhonebook()
 	for(int i = 0; i < std::min(this->_nowIndex, 8); i++)
 	{
 		std::cout << std::setw(10) << i + 1 <<"|";
-		std::cout << std::setw(10) << _cutTen(_contact[i].getFirstName()) << "|";
-		std::cout << std::setw(10) << _cutTen(_contact[i].getLastName()) << "|";
-		std::cout << std::setw(10) << _cutTen(_contact[i].getNickName()) << "|" << std::endl;
+		std::cout << std::setw(10) << _cutTen(this->_contact[i].getFirstName()) << "|";
+		std::cout << std::setw(10) << _cutTen(this->_contact[i].getLastName()) << "|";
+		std::cout << std::setw(10) << _cutTen(this->_contact[i].getNickName()) << "|" << std::endl;
 	}
 	std::cout << std::setw(44) << std::setfill('=') << "=" << std::endl;
 	std::cout << std::setfill(' ');
@@ -71,7 +71,7 @@ void	PhoneBook::searchPeople()
 	}
 	std::cin.ignore();
 	std::cout << std::endl;
-	_contact[phone_index - 1].show();
+	this->_contact[phone_index - 1].show();
 	std::cout << std::endl;
 
 }
