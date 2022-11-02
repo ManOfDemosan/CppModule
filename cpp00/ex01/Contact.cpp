@@ -35,29 +35,44 @@ void Contact::show(void) const
 
 }
 
-void Contact::setFirstName(std::string _firstName)
+void Contact::setFirstName()
 {
-	this->_firstName = _firstName;
+	std::cout << "first name : ";
+	std::getline(std::cin, this->_firstName);
+	if (this->_firstName.length() <= 0)
+		setFirstName();
 }
 
-void Contact::setLastName(std::string _lastName)
+void Contact::setLastName()
 {
-	this->_lastName = _lastName;
+	std::cout << "last name : ";
+	std::getline(std::cin, this->_lastName);
+	if (this->_lastName.length() <= 0)
+		setLastName();
 }
 
-void Contact::setNickName(std::string _nickName)
+void Contact::setNickName()
 {
-	this->_nickName = _nickName;
+	std::cout << "nick name : ";
+	std::getline(std::cin, this->_nickName);
+	if (this->_nickName.length() <= 0)
+		setNickName();
 }
 
-void Contact::setPhoneNum(std::string _phoneNum)
+void Contact::setPhoneNum()
 {
-	this->_phoneNum = _phoneNum;
+	std::cout << "phone num : ";
+	std::getline(std::cin, this->_phoneNum);
+	if (this->_phoneNum.length() <= 0)
+		setPhoneNum();
 }
 
-void Contact::setSecret(std::string _secret)
+void Contact::setSecret()
 {
-	this->_secret = _secret;
+	std::cout << "Shhhh... Secret : ";
+	std::getline(std::cin, this->_secret);
+	if (this->_secret.length() <= 0)
+		setSecret();
 }
 
 Contact::Contact()
