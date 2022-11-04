@@ -10,4 +10,5 @@ int main(){
 	zombie2.announce();
 	zombie3->announce();
 	delete zombie3;
+	return 0;
 }
