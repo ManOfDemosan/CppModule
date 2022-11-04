@@ -3,14 +3,14 @@
 
 void	PhoneBook::addContact()
 {
-	int idx;
-
-	idx = this->_nowIndex % 8;
-	this->_contact[idx].setFirstName();
-	this->_contact[idx].setLastName();
-	this->_contact[idx].setNickName();
-	this->_contact[idx].setPhoneNum();
-	this->_contact[idx].setSecret();
+	if(this->_nowIndex == 8)
+		this->_nowIndex = 0;
+	// this->_nowIndex % 8;
+	this->_contact[this->_nowIndex].setFirstName();
+	this->_contact[this->_nowIndex].setLastName();
+	this->_contact[this->_nowIndex].setNickName();
+	this->_contact[this->_nowIndex].setPhoneNum();
+	this->_contact[this->_nowIndex].setSecret();
 	++this->_nowIndex;
 }
 
