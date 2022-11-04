@@ -3,9 +3,10 @@ CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
-FILES = ./Zombie.hpp \
-		./ramdomChump.cpp \
-		./newZombie.cpp
+FILES = ./Zombie.cpp \
+		./newZombie.cpp \
+		./randomChump.cpp \
+		./main.cpp
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)
 
