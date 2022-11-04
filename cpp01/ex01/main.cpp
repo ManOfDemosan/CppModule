@@ -4,7 +4,7 @@
 int main(){
 	Zombie zombie1;
 	Zombie zombie2("2. stack_zom");
-	Zombie *zombie3 = Zombie::zombieHorde(NUM, "XXzomXX");
+	Zombie *zombie3 = Zombie::zombieHorde(NUM, "zom");
 
 	zombie1.announce();
 	zombie2.announce();
