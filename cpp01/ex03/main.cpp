@@ -15,7 +15,7 @@ int main()
 		Weapon club = Weapon("crude spiked club");
 		
 		HumanB jim("Jim");
-		jim.setWeapon(club);
+		jim.setWeapon(club);// 생성자에서 따로 받지 않을때 그냥 club이라는 클래스의 주소값을 가져가도 되는 이유는 class도 int 처럼 자료형이기 때문이다
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
