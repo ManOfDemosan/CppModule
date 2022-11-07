@@ -1,9 +1,10 @@
-NAME = sed
+NAME = sad
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
 FILES = ./main.cpp \
+		./Sadfile.cpp
 		
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)

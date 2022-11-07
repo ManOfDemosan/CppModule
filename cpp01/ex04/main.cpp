@@ -6,4 +6,5 @@ int main(int argc, char **argv){
 		return 1;
 	}
 	Sadfile sadfile = Sadfile(argv[1], argv[2], argv[3]);
+	return (sadfile.replaceFile());
 }
