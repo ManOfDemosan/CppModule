@@ -1,5 +1,5 @@
 NAME = sad
-CC = c++
+CC = c++ -g3
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 

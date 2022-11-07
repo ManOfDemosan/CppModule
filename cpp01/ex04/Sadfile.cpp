@@ -41,12 +41,12 @@ int Sadfile::replaceFile(){
 		while (prev < str.length() && (index = str.find(_s1, prev)) != std::string::npos){
 			writeFile << str.substr(prev, index - prev);
 			writeFile << _s2;
-			prev = index + _s1.length(); // min안써도 되는듯?
+			prev = index + _s1.length();
 		}
 		writeFile << str.substr(prev);
 	}
-	readFile.close();
 	writeFile.close();
+	readFile.close();
 	return 0;
 }
 //size, length 개행뺀 문자열의 개수를 반환한다.
