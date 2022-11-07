@@ -41,7 +41,7 @@ int Sadfile::replaceFile(){
 		while (prev < str.length() && (index = str.find(_s1, prev)) != std::string::npos){
 			writeFile << str.substr(prev, index - prev);
 			writeFile << _s2;
-			prev = index + _s1.length();
+			prev = index + _s1.length(); // min안써도 되는듯?
 		}
 		writeFile << str.substr(prev);
 	}
