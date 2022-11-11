@@ -32,7 +32,7 @@ Fixed::~Fixed(){
 	std::cout << "Destructor called" << std::endl;
 }
 
-int	Fixed::toInt() const{
+int		Fixed::toInt() const{
 	return(this->_fixedPointNum >> this->_numOfFractionalBit);
 }
 
