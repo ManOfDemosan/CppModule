@@ -33,9 +33,19 @@ public:
 	Fixed	operator/(const Fixed& f);
 
 	// 4 increment/decrement operators 
-
-	int	getBit() const;
-	void	setBit(int setbit);
+	Fixed&	operator++();
+	Fixed&	operator--();
+	Fixed	operator++(int);
+	Fixed	operator--(int);
+	
+	//4 public overloaded member functions
+	static Fixed& min(Fixed& lhs, Fixed& rhs);
+	static Fixed& max(Fixed& lhs, Fixed& rhs);
+	const static Fixed& min(const Fixed& lhs, const Fixed& rhs);
+	const static Fixed& max(const Fixed& lhs, const Fixed& rhs);
+	
+	int	getRawBits() const;
+	void	setRawBits(int setRawBits);
  	float toFloat() const;
 };
 
