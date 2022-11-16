@@ -12,6 +12,7 @@ private:
     unsigned int _attackDamage;
 public:
     ClapTrap();
+    ClapTrap(const ClapTrap& obj);
     ClapTrap(std::string name);
     ~ClapTrap();
     ClapTrap& operator=(const ClapTrap& rhs);
@@ -19,8 +20,5 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 };
-
-
-
 
 #endif
