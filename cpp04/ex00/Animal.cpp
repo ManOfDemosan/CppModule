@@ -11,7 +11,7 @@ Animal::Animal(const Animal& obj) {
 }
 
 Animal::~Animal() {
-    std::cout << this->_type << " is vanish" << std::endl;
+    std::cout << "Animal ["<< this->_type << "] is vanish" << std::endl;
 
 }
 
@@ -21,5 +21,9 @@ Animal& Animal::operator=(const Animal& obj) {
 }
 
 void Animal::makeSound() const{
-    std::cout << this->_type << " make sound" << std::endl;
+    std::cout << this->_type << " make sound" << " NOTHING" << std::endl;
+}
+
+std::string Animal::getType() const {
+	return _type;
 }
