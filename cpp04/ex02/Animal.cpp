@@ -20,9 +20,9 @@ Animal& Animal::operator=(const Animal& obj) {
     return(*this);
 }
 
-void Animal::makeSound() const{
-    std::cout << this->_type << " make sound" << " NOTHING" << std::endl;
-}
+// void Animal::makeSound() const{
+//     std::cout << this->_type << " make sound" << " NOTHING" << std::endl;
+// }
 
 std::string Animal::getType() const {
 	return _type;
