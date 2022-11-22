@@ -9,7 +9,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat& obj) : _name(obj.getName()) , _grade(ob
 Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : _name(name), _grade(grade){
     if(_grade > 150)
         throw GradeTooLowException();
-    else if(_grade < 1)
+    else if(_grade <= 0)
         throw GradeTooHighException();
 }
 
@@ -31,8 +31,27 @@ std::string Bureaucrat::getName() const{
     return(this->_name);
 }
 
-const char * Bureaucrat::GradeTooHighException
+void    Bureaucrat::upGrade(){
+    if(this->_grade - 1 < 1)
+        throw GradeTooHighException();
+    else
+        --this->_grade;
+}
 
+void    Bureaucrat::deGrade(){
+    if(this->_grade - 1 > 150)
+        throw GradeTooLowException();
+    else
+        ++this->_grade;
+}
+
+const char * Bureaucrat::GradeTooHighException::what() const throw(){
+    return(" Grade Too High");
+}
+
+const char * Bureaucrat::GradeTooLowException::what() const throw(){
+    return(" Grade Too Low");
+}
 
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bu){
