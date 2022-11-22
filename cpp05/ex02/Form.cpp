@@ -77,8 +77,9 @@ const char * Form::NonSignedFormException::what() const throw()
 
 std::ostream&   operator<<(std::ostream& os, const Form& rhs)
 {
-	return (os << "Form name: " << rhs.getName() << std::endl
-	<< "Form signe grade: " << rhs.getSigneGrade() << std::endl
-	<< "Form exec grade: " << rhs.getExecGrade() << std::endl
+	return (os 
+    // << "Form name: " << rhs.getName() << std::endl
+	// << "Form signe grade: " << rhs.getSigneGrade() << std::endl
+	// << "Form exec grade: " << rhs.getExecGrade() << std::endl
 	<< "***Form signed: " << rhs.getSigned() << std::endl);
 }

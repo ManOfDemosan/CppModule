@@ -2,12 +2,12 @@ NAME = Bureaucrat
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
-		# ./RobotomyRequestForm.cpp \
-		# ./PresidentialPardonForm.cpp \
 
 FILES = ./Bureaucrat.cpp \
 		./Form.cpp \
 		./ShrubberyCreationForm.cpp \
+		./RobotomyRequestForm.cpp \
+		./PresidentialPardonForm.cpp \
 		./main.cpp
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)

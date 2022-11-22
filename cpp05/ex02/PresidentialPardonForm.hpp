@@ -5,7 +5,11 @@
 
 class PresidentialPardonForm : public Form{
  private:
+  std::string _target;
  public:
+  virtual void  execute(Bureaucrat const &executor) const;
+  
+  PresidentialPardonForm(std::string target);
   PresidentialPardonForm();
   PresidentialPardonForm(const PresidentialPardonForm& obj);
   ~PresidentialPardonForm();
