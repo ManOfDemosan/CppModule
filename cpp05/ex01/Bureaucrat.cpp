@@ -47,6 +47,19 @@ void    Bureaucrat::deGrade(){
         ++this->_grade;
 }
 
+void    Bureaucrat::signeForm(Form &form){//여기서 if문 던지지 말고 try catch문 쓰기!
+    try
+    {
+        form.beSigned(*this);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << this->_name << " couldn't signed " << form.getName() << " because " << e.what() << std::endl;
+        return ;    
+    }
+    std::cout << this->_name << " signed " << form.getName() << std::endl;
+}
+
 const char * Bureaucrat::GradeTooHighException::what() const throw(){
     return("Grade Too High");
 }
@@ -54,7 +67,6 @@ const char * Bureaucrat::GradeTooHighException::what() const throw(){
 const char * Bureaucrat::GradeTooLowException::what() const throw(){
     return("Grade Too Low");
 }
-
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bu){
     return os << bu.getName() << ", bureaucrat grade " <<bu.getGrade() << std::endl; 

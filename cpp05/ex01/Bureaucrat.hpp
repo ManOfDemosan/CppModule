@@ -2,6 +2,9 @@
 #define BUREAUCRAT_HPP
 
 # include <iostream>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
  private:
@@ -18,6 +21,9 @@ class Bureaucrat {
   unsigned int  getGrade() const;
   void  upGrade();//등급이 올라가려면 마이너스
   void  deGrade();//등급이 떨어지려면 쁠러스
+
+  void  signeForm(Form &form);
+
 
   class GradeTooLowException : public std::exception{
     const char * what() const throw();
