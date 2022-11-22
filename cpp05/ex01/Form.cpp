@@ -1,7 +1,7 @@
 #include "Form.hpp"
 
 Form::Form(std::string name, unsigned int sG, unsigned int eG): 
-    _name(name), _signed(false), _signeGrade(sG), _execGrade(eG){
+    _name(this->getName()), _signed(false), _signeGrade(sG), _execGrade(eG){
     if(eG < 1 || sG < 1){
         throw GradeTooHighException ();
     }
@@ -15,7 +15,7 @@ Form::Form() :
 }
 
 Form::Form(const Form& obj) :
-_name(obj._name), _signed(obj._signed), _signeGrade(obj._signeGrade), _execGrade(obj._execGrade){
+_name(obj.getName()), _signed(obj._signed), _signeGrade(obj.getSigned()), _execGrade(obj.getExecGrade()){
 }
 
 Form& Form::operator=(const Form& obj) {
