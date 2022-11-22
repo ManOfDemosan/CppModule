@@ -1,7 +1,7 @@
 #include "Form.hpp"
 
 Form::Form(std::string name, unsigned int sG, unsigned int eG): 
-    _name(this->getName()), _signed(false), _signeGrade(sG), _execGrade(eG){
+    _name(name), _signed(false), _signeGrade(sG), _execGrade(eG){
     if(eG < 1 || sG < 1){
         throw GradeTooHighException ();
     }
@@ -67,5 +67,5 @@ std::ostream&   operator<<(std::ostream& os, const Form& rhs)
 	return (os << "Form name: " << rhs.getName() << std::endl
 	<< "Form signe grade: " << rhs.getSigneGrade() << std::endl
 	<< "Form exec grade: " << rhs.getExecGrade() << std::endl
-	<< "Form signed: " << rhs.getSigned() << std::endl);
+	<< "***Form signed: " << rhs.getSigned() << std::endl);
 }
