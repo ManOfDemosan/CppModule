@@ -27,6 +27,8 @@ int main(){
 	a.signeForm(*daetong);
 	a.executeForm(*daetong);
 	std::cout << *daetong<< std::endl;
-    std::cout << std::endl;		
-
+    std::cout << std::endl;
+	delete shrubbery;
+	delete robotomy;
+	delete daetong;
 }
