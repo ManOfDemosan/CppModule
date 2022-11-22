@@ -21,7 +21,7 @@ PresidentialPardonForm::~PresidentialPardonForm() {
 }
 
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& obj) {
-	std::cout << "Operator = in Robotomy" << std::endl;
+	std::cout << "Operator = in PRESIDENTIAL" << std::endl;
 	this->_target = obj._target;
 	return (*this);
 }
