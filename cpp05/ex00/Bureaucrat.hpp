@@ -14,7 +14,7 @@ class Bureaucrat {
   ~Bureaucrat();
   Bureaucrat& operator=(const Bureaucrat& obj);
 
-  std::string  getName() const;
+  virtual std::string  getName() const;
   unsigned int  getGrade() const;
   void  upGrade();//등급이 올라가려면 마이너스
   void  deGrade();//등급이 떨어지려면 쁠러스
