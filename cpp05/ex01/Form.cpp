@@ -19,9 +19,10 @@ _name(obj._name), _signed(obj._signed), _signeGrade(obj._signeGrade), _execGrade
 }
 
 Form& Form::operator=(const Form& obj) {
-    this->_signed = obj._signed;
-    this->_signeGrade = obj._signeGrade;
-    this->_execGrade = obj._execGrade;
+    this->_signed = obj.getSigned();
+    *(const_cast<std::string*>(&this->_name)) = obj.getName();
+    *(const_cast<unsigned int*>(&this->_signeGrade)) = obj.getSigneGrade();
+    *(const_cast<unsigned int*>(&this->_execGrade)) = obj.getExecGrade();
     return (*this);
 }
 
@@ -45,7 +46,7 @@ bool    Form::getSigned() const{
 }
 
 void    Form::beSigned(Bureaucrat& bu){
-    if(bu.getGrade() <= this->_signeGrade)
+    if(bu.getGrade() <= this->_signeGrade && this->_signed == false)
         this->_signed = true;
     else{
         throw GradeTooLowException ();
