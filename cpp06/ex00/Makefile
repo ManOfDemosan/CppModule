@@ -1,9 +1,9 @@
-NAME = casting
+NAME = conversion
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
-FILES =  \
+FILES = ./Conversion.cpp\
 		./main.cpp
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)
