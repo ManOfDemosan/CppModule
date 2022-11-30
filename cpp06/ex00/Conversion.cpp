@@ -30,10 +30,12 @@ Conversion::Conversion(std::string param): _param(param), _paramValue(0.0), _che
      _paramValue = std::strtod(_param.c_str(), &ptr);
     if(_paramValue == 0.0 && (_param[0] != '-' && _param[0] != '+' && !std::isdigit(_param[0]))){
         _check = true;
+		std::cout << "here1" << std::endl;
         return ;
     }
     if(*ptr && std::strcmp(ptr, "f")){
         _check = true;
+		std::cout << "here" << std::endl;
         return ;
     }
 
@@ -95,7 +97,7 @@ void Conversion::printDouble(std::ostream &os) const {
 	}else if (toDouble() == static_cast<int64_t>(toDouble())) {
 		os << "double: " << toDouble() << ".0" << std::endl;
 	} else {
-		os << "double2: " << std::setprecision(std::numeric_limits<double>::digits10) << toDouble() << std::endl;
+		os << "double: " << std::setprecision(std::numeric_limits<double>::digits10) << toDouble() << std::endl;
 	}
 }
 
