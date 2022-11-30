@@ -12,7 +12,7 @@ class Conversion {
  private:
  std::string _param;
  double _paramValue;
- bool   _check;
+
  public:
   Conversion();
   Conversion(std::string param);

@@ -6,15 +6,11 @@ Conversion::Conversion(const Conversion& obj) {*this = obj;}
 Conversion& Conversion::operator=(const Conversion& obj) 
 {
 	if (this != &obj) {
-		_check = obj.checkError();
+		// _check = obj.checkError();
 		_param = obj.getParam();
 		_paramValue = obj.getParamValue();
 	}
 	return *this;
-}
-
-bool Conversion::checkError() const {
-	return _check;
 }
 
 std::string Conversion::getParam() const {
@@ -25,18 +21,9 @@ double Conversion::getParamValue() const {
 	return _paramValue;
 }
 
-Conversion::Conversion(std::string param): _param(param), _paramValue(0.0), _check(false){
+Conversion::Conversion(std::string param): _param(param), _paramValue(0.0){
     char *ptr = NULL;
      _paramValue = std::strtod(_param.c_str(), &ptr);
-    if(_paramValue == 0.0 && (_param[0] != '-' && _param[0] != '+' && !std::isdigit(_param[0]))){
-        _check = true;
-        return ;
-    }
-    if(*ptr && std::strcmp(ptr, "f")){
-        _check = true;
-        return ;
-    }
-
 }
 
 char Conversion::toChar() const {
