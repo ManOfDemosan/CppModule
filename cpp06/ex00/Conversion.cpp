@@ -6,7 +6,6 @@ Conversion::Conversion(const Conversion& obj) {*this = obj;}
 Conversion& Conversion::operator=(const Conversion& obj) 
 {
 	if (this != &obj) {
-		// _check = obj.checkError();
 		_param = obj.getParam();
 		_paramValue = obj.getParamValue();
 	}
