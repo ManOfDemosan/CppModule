@@ -1,9 +1,9 @@
-NAME = casting
+NAME = serialization
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
-FILES =  \
+FILES =  ./Data.cpp\
 		./main.cpp
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)
