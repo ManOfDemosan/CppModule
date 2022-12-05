@@ -1,7 +1,7 @@
 #include "Data.hpp"
 
 int main(){
-	Data* a = new Data(40);
+	Data* a = new Data(42);
 	uintptr_t uintptr;
 
 	std::cout << "===============데이터 만들기=============="<< std::endl;
