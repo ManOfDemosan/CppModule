@@ -8,7 +8,7 @@ Base* generate(){
 	Base *base;
 
     std::srand(static_cast<unsigned int>(time(NULL)));
-	int rand = std::rand();
+	int rand = std::rand() % 3;
 	switch (rand)
 	{
 		case 0 :
@@ -19,7 +19,7 @@ Base* generate(){
 			std::cout << "B is generated!" << std::endl; 
 			base = new B;
 			break;
-		default:
+		case 2:
 			std::cout << "C is generated!" << std::endl; 
 			base = new C;
 			break;
