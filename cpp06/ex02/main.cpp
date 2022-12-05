@@ -39,19 +39,19 @@ void identify(Base* p){
 void identify(Base& p){
 	try {
 		(void)dynamic_cast<A&>(p);
-		std::cout << "A" << std::endl;
+		std::cout << "rA" << std::endl;
 	} catch (std::exception& e) {
 		(void)e;
 	}
 	try {
 		(void)dynamic_cast<B&>(p);
-		std::cout << "B" << std::endl;
+		std::cout << "rB" << std::endl;
 	} catch (std::exception& e) {
 		(void)e;
 	}
 	try {
 		(void)dynamic_cast<C&>(p);
-		std::cout << "C" << std::endl;
+		std::cout << "rC" << std::endl;
 	} catch (std::exception& e) {
 		(void)e;
 	}
