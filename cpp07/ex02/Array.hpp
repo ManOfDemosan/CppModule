@@ -21,7 +21,7 @@ class Array {
 
   };
 
-  T& operator[](unsigned int i){
+T& operator[](const unsigned int i) const{
       if(i < 0 || i >= _len){
         throw OutOfRange();
       }
