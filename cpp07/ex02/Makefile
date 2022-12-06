@@ -1,4 +1,4 @@
-NAME = Dynamic
+NAME = Array
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
