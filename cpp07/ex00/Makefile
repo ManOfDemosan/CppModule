@@ -1,10 +1,9 @@
-NAME = whatever
+NAME = Whatever
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
-FILES = ./Whatever.cpp \
-		./main.cpp
+FILES = ./main.cpp
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)
 
