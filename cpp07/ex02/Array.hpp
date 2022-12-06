@@ -21,12 +21,20 @@ class Array {
 
   };
 
-T& operator[](const unsigned int i) const{
+ T& operator[](unsigned int i){
       if(i < 0 || i >= _len){
         throw OutOfRange();
       }
     return (_array[i]);
   };
+
+ const T& operator[](unsigned int i) const{
+      if(i < 0 || i >= _len){
+        throw OutOfRange();
+      }
+    return (_array[i]);
+  };
+  
  // size and getter
  unsigned int size(void) const{
 	return (this->_len);
