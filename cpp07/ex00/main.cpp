@@ -3,16 +3,26 @@
 
 int main( void ) 
 { 
+	std::cout << "=============생성부=============" << std::endl; 
 	int a = 2;
 	int b = 3;
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "=============스왑 해보기=============" << std::endl; 
 	swap( a, b );
 	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "=============최대 최소값=============" << std::endl; 
 	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
 	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+	std::cout << "=============생성부=============" << std::endl; 
 	std::string c = "chaine1";
 	std::string d = "chaine2";
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+	std::cout << "=============스왑 해보기=============" << std::endl; 
 	::swap(c, d);
 	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "=============최대 최소값=============" << std::endl; 
 	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
 	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
     return 0; 
