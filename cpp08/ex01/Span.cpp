@@ -28,14 +28,26 @@ void Span::addNumber(int num){
 }
 
 unsigned int Span::shortestSpan(){
-
+	if(_capacity.size() < 2)
+		throw FullCapacity();
+	std::vector<unsigned int>temp = _capacity;
+	std::sort(temp.begin(), temp.end());
+	unsigned int spanmin = *(temp.begin() + 1) - *temp.begin();
+	for (std::vector<unsigned int>::iterator i = temp.begin() + 1; i < temp.end() - 1; i++) {
+		if (*(i + 1) - *i < spanmin)
+			spanmin = *(i + 1) - *i;
+	}
+	return spanmin;
 }
 
 unsigned int Span::longestSpan(){
-
+	if (_capacity.size() < 2)
+		throw FullCapacity();
+	std::vector<unsigned int>temp = _capacity;
+	std::sort(temp.begin(), temp.end());
+	return *(temp.end() - 1) - *temp.begin();
 }
 
-const char *Span::FullCapacity::what(void) const throw()
-{
+const char *Span::FullCapacity::what(void) const throw(){
 	return "Capacity 의 자리가 없어요!";
 }
