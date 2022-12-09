@@ -1,9 +1,10 @@
-NAME = Whatever
+NAME = Span
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
 
-FILES = ./main.cpp
+FILES = ./Span.cpp \
+		./main.cpp
 SRCS = $(FILES)
 OBJS = $(SRCS:.cpp=.o)
 
