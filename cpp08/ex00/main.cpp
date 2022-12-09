@@ -45,14 +45,4 @@ int main(){
 	} catch (std::exception & e) {
 		std::cerr << e.what() << std::endl;
 	}
-	// std::cout << "값 7의 위치는? : " << easyfind(test1, 7) << std::endl;
-	// std::cout << "값 11의 위치는? : " << easyfind(test1, 11) << std::endl;
-	// std::cout << "test2" << std::endl;
-	// printVector(test2);
-	// std::cout << "값 7의 위치는? : " << easyfind(test2, 7) << std::endl;
-	// std::cout << "값 11의 위치는? : " << easyfind(test2, 11) << std::endl;
-	// std::cout << "test3" << std::endl;
-	// printVector(test3);
-	// std::cout << "값 7의 위치는? : " << easyfind(test3, 7) << std::endl;
-	// std::cout << "값 11의 위치는? : " << easyfind(test3, 11) << std::endl;
 }
