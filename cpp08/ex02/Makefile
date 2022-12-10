@@ -1,4 +1,4 @@
-NAME = Whatever
+NAME = We_are_all_mutant
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -f
